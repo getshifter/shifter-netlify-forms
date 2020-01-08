@@ -31,13 +31,6 @@ function gform_action_attribute( $gform_action_attribute, $form ) {
   return $gform_action_attribute;
 }
 
-// Remove method attribute
-// add_filter( 'gform_form_tag', 'gform_method_attribute', 10, 2 );
-// function gform_method_attribute( $gform_method_attribute) {
-//   $gform_method_attribute = preg_replace( "|method='(.*?)'|", "", $gform_method_attribute );
-//   return $gform_method_attribute;
-// }
-
 // Add form name as attribute
 add_filter('gform_form_tag', 'gform_name_attribute', 10, 2);
 function gform_name_attribute( $form_tag, $form){
